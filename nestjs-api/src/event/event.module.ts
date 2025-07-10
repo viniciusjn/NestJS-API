@@ -8,7 +8,7 @@ import { Event, EventSchema } from './Schema/events.schema';
 @Module({
   imports: [MongooseModule.forFeature([{ name: Event.name, schema: EventSchema }])],
   controllers: [EventController],
-  providers: [CreateEventRepository, CreateEventRepository],
+  providers: [CreateEventRepository, CreateEventService],
   exports: [CreateEventRepository, CreateEventService],
 })
 export class EventModule {}
