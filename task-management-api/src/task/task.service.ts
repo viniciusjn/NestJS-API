@@ -39,6 +39,7 @@ export class TaskService {
     let taskIndex = this.tasks.findIndex((t) => t.id === task.id);
     if (taskIndex >= 0) {
       this.tasks[taskIndex] = task;
+      return;
     }
 
     throw new HttpException(
